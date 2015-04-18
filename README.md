@@ -1,7 +1,7 @@
 Avro Tools Docker
 =================
 
-Docker around the [Avro Tool](http://avro.apache.org/docs/1.7.7)
+Docker around the [Avro Tool](http://avro.apache.org/docs/1.7.7).
 
 Example - Get Help:
 
