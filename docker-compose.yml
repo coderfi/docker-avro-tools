@@ -1,0 +1,4 @@
+cli:
+    build: .
+    volumes:
+    - ".:/share"
