@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java8
+FROM java:8
 MAINTAINER coderfi@gmail.com
 
 ENV AVRO_VERSION 1.7.7
