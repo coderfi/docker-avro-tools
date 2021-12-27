@@ -1,12 +1,13 @@
-FROM dockerfile/java:oracle-java8
+FROM openjdk:8
 MAINTAINER coderfi@gmail.com
 
-ENV AVRO_VERSION 1.7.7
-ENV AVRO_TOOLS_JAR /usr/share/java/avro-tools-${AVRO_VERSION}.jar
+ENV AVRO_VERSION 1.11.0
+RUN mkdir -p /opt/avro
+ENV AVRO_TOOLS_JAR /opt/avro/avro-tools-${AVRO_VERSION}.jar
 
 RUN mkdir -p /share \
- && cd /usr/share/java \
- && wget http://mirrors.gigenet.com/apache/avro/avro-${AVRO_VERSION}/java/avro-tools-${AVRO_VERSION}.jar
+ && cd /opt/avro \
+ && wget https://repo1.maven.org/maven2/org/apache/avro/avro-tools/${AVRO_VERSION}/avro-tools-${AVRO_VERSION}.jar
 
 WORKDIR /share
 
